@@ -1,0 +1,19 @@
+{
+    "name": "DevinCodes/php-tiny-compiler",
+    "description": "A TinyCompiler implementation in PHP",
+    "authors": [
+        {
+            "name": "Devin Beeuwkes",
+            "email": "devinbeeuwkes7@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "TinyCompiler\\": "src"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.1"
+    }
+}
