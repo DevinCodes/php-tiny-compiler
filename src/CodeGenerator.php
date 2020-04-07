@@ -3,7 +3,6 @@
 
 namespace TinyCompiler;
 
-
 class CodeGenerator
 {
     public function generate(array $node) : string

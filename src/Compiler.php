@@ -3,7 +3,6 @@
 
 namespace TinyCompiler;
 
-
 class Compiler
 {
     protected ?Tokenizer $tokenizer = null;
@@ -72,6 +71,4 @@ class Compiler
     {
         $this->transformer = $transformer;
     }
-
-
 }

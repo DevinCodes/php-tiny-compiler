@@ -3,7 +3,6 @@
 
 namespace TinyCompiler;
 
-
 class Parser
 {
     private array $tokens;
@@ -63,7 +62,7 @@ class Parser
             $token = $this->tokens[$this->current];
 
 
-            while(
+            while (
                 $token['type'] !== 'parenthesis' ||
                 (
                     $token['type'] === 'parenthesis' &&
@@ -80,6 +79,5 @@ class Parser
         }
 
         throw new \TypeError($token['type']);
-
     }
 }

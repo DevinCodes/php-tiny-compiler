@@ -3,7 +3,6 @@
 
 namespace TinyCompiler;
 
-
 class Traverser
 {
     private array $visitor;

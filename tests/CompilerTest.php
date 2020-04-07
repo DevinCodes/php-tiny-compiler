@@ -1,7 +1,8 @@
 <?php
 
-use PHPUnit\Framework\TestCase;
+namespace TinyCompiler\Tests;
 
+use PHPUnit\Framework\TestCase;
 
 final class CompilerTest extends TestCase
 {
@@ -145,5 +146,4 @@ final class CompilerTest extends TestCase
             $compiler->compile($this->input)
         );
     }
-
 }

@@ -3,7 +3,6 @@
 
 namespace TinyCompiler;
 
-
 class Tokenizer
 {
     public function tokenize(string $input) : array
@@ -84,7 +83,6 @@ class Tokenizer
             }
 
             throw new \Exception(sprintf("Syntax error: unexpected %s", $character));
-
         }
 
         return $tokens;

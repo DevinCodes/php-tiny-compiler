@@ -3,7 +3,6 @@
 
 namespace TinyCompiler;
 
-
 class Transformer
 {
     private Traverser $traverser;
@@ -11,7 +10,6 @@ class Transformer
     public function __construct(Traverser $traverser)
     {
         $this->traverser = $traverser;
-
     }
 
     public function transform(array $tree)
@@ -29,7 +27,7 @@ class Transformer
 
         $this->traverser->traverse($tree, [
             'NumberLiteral' => [
-                'enter' => function($node, &$parent) {
+                'enter' => function ($node, &$parent) {
                     $parent['_context'][] = [
                         'type'  => 'NumberLiteral',
                         'value' => $node['value'],
@@ -37,7 +35,7 @@ class Transformer
                 }
             ],
             'StringLiteral' => [
-                'enter' => function($node, &$parent) {
+                'enter' => function ($node, &$parent) {
                     $parent['_context'][] = [
                         'type'  => 'StringLiteral',
                         'value' => $node['value'],
@@ -45,7 +43,7 @@ class Transformer
                 }
             ],
             'CallExpression' => [
-                'enter' => function(&$node, &$parent) {
+                'enter' => function (&$node, &$parent) {
                     $expression = [
                         'type' => 'CallExpression',
                         'callee' => [

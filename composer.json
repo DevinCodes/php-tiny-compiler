@@ -13,7 +13,14 @@
             "TinyCompiler\\": "src"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "TinyCompiler\\Tests\\": "tests/"
+        }
+    },
     "require-dev": {
-        "phpunit/phpunit": "^9.1"
+        "phpunit/phpunit": "^9.1",
+        "phpstan/phpstan": "^0.12.18",
+        "friendsofphp/php-cs-fixer": "^2.16"
     }
 }
