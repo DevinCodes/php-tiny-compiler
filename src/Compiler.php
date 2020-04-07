@@ -5,10 +5,10 @@ namespace TinyCompiler;
 
 class Compiler
 {
-    protected ?Tokenizer $tokenizer = null;
-    protected ?Parser $parser = null;
-    protected ?CodeGenerator $codeGenerator = null;
-    protected ?Transformer $transformer = null;
+    protected Tokenizer $tokenizer;
+    protected Parser $parser;
+    protected CodeGenerator $codeGenerator;
+    protected Transformer $transformer;
 
     public function __construct()
     {
@@ -22,13 +22,6 @@ class Compiler
         );
     }
 
-    /**
-     * Compile the provided LISP code into C code.
-     *
-     * @param string $content
-     * @return mixed|string
-     * @throws \Exception
-     */
     public function compile(string $content) : string
     {
         return $this->codeGenerator->generate(
@@ -40,34 +33,22 @@ class Compiler
         );
     }
 
-    /**
-     * @param Tokenizer|null $tokenizer
-     */
-    public function setTokenizer(?Tokenizer $tokenizer): void
+    public function setTokenizer(Tokenizer $tokenizer): void
     {
         $this->tokenizer = $tokenizer;
     }
 
-    /**
-     * @param Parser|null $parser
-     */
-    public function setParser(?Parser $parser): void
+    public function setParser(Parser $parser): void
     {
         $this->parser = $parser;
     }
 
-    /**
-     * @param CodeGenerator|null $codeGenerator
-     */
-    public function setCodeGenerator(?CodeGenerator $codeGenerator): void
+    public function setCodeGenerator(CodeGenerator $codeGenerator): void
     {
         $this->codeGenerator = $codeGenerator;
     }
 
-    /**
-     * @param Transformer|null $transformer
-     */
-    public function setTransformer(?Transformer $transformer): void
+    public function setTransformer(Transformer $transformer): void
     {
         $this->transformer = $transformer;
     }
